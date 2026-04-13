@@ -1,0 +1,65 @@
+body{
+    text-align: center;
+    background: linear-gradient(to right, yellow, rgb(232, 99, 4),rgb(199, 41, 243));
+}
+button{
+    background-color: rgb(17, 213, 17);
+    font-weight: bold;
+    font-size: large;
+    margin: 50px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+    font-weight: bold;
+}
+h1{
+    color: blue;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px red;
+}
+input{
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+}
+form{
+    display: flexbox;
+    align-items: center;
+}
+.dlebtn{
+    background-color: red;
+     margin: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.edbtn{
+    background-color: rgb(239, 63, 230);
+     margin: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+form{
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.form-group label{
+    width: 180px;
+    font-weight: bold;
+}
+.form-group input,.form-group  select{
+    flex: 1;
+    padding: 8px
+}
+label{
+    width: 200px;
+}

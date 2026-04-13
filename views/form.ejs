@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+      <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <h1>Student Enrollmrnt Form</h1>
+    <form id="stdform">
+        <div class="form-group">
+        <label><b>Name:</b> </label>
+        <input  type="text" name="name" placeholder="Enter your Name" required>
+        </div>
+
+        <div class="form-group">
+        <label><b>Date of Birth: </b></label>
+         <input type="date" name="DOB">
+         </div>
+
+         <div class="form-group">
+         <label><b>Phone Number </b> </label>
+          <input type="tel" name="phone" placeholder="Enter your Contact Number">
+          </div>
+
+          <div class="form-group">
+          <label><b>Email: </b></label>
+           <input type="email" name="email" placeholder="Enter your Email Id">
+           </div>
+
+           <div class="form-group">
+           <label><b>Current Address: </b></label>
+            <input type="text" name="address" placeholder="Enter your Address">
+            </div>
+
+            <div class="form-group">
+             <label><b>Gender:</b> </label>
+            <input type="radio" name="gender" value="Male"><h3>Male</h3>
+            <input type="radio" name="gender" value="Female"><h3>Female</h3>
+             <input type="radio" name="gender" value="Others"><h3>Other</h3>
+             </div>
+
+             <div class="form-group">
+               <label><b>Select the course you want to enroll:</b> </label>
+               <select name="course">
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>BA</option>
+                <option>B.Com</option>
+                <option>B.Sc</option>
+               </select>
+               </div>
+               <button type="submit">Submit</button>
+    </form>
+    <p id="msg"></p>
+    <script src="/JS/enroll.js"></script>
+</body>
+</html>

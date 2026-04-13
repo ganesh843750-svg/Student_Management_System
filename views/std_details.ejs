@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+      <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1>Here are the student Information of your college</h1>
+    <table border="5">
+        <thead >
+            <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Phone Number</th>
+                <th>Email Id</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Enrolled Course</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach((student)=>{ %>
+                <tr>
+                <td><%= student.name %></td>
+                <td><%= student.DOB %></td>
+                <td><%= student.phone%></td>
+                <td><%= student.email %></td>
+                <td><%= student.address %></td>
+                 <td><%= student.gender %></td>
+                <td><%= student.course %></td>
+                <td>
+                    <button class="dlebtn" data-id="<%= student._id %>">Delete</button>
+                </td>
+                <td>
+                      <button class="edbtn" data-id="<%= student._id %>">Edit</button>
+                </td>
+                </tr>
+          <%  }) %>
+        </tbody>
+    </table>
+    <script src="/JS/dle_edt.js"></script>
+</body>
+</html>

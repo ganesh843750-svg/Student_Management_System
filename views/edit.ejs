@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Form</title>
+      <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <h1>Update Student Data</h1>
+    <form id="edform">
+
+        <input type="hidden" id="studentID" value="<%= student._id %>">
+          <div class="form-group">
+        <label><b>Name:</b> </label>
+        <input class="in" type="text" name="name" placeholder="Enter your Name" value="<%= student.name%>" required>
+          </div>
+
+            <div class="form-group">
+        <label><b>Date of Birth: </b></label>
+         <input class="in" type="date" name="DOB" value="<%= student.DOB%>">
+            </div>
+
+              <div class="form-group">
+         <label><b>Phone Number </b> </label>
+          <input class="in" type="tel" name="phone" placeholder="Enter your Contact Number" value="<%= student.phone%>">
+              </div>
+
+                <div class="form-group">
+          <label><b>Email: </b></label>
+           <input class="in" type="email" name="email" placeholder="Enter your Email Id" value="<%= student.email%>">
+                </div>
+
+                  <div class="form-group">
+           <label><b>Current Address: </b></label>
+            <input class="in" type="text" name="address" placeholder="Enter your Address" value="<%= student.address%>">
+                  </div>
+                    <div class="form-group">
+             <label><b>Gender:</b> </label>
+            <input type="radio" name="gender" value="Male" <%= student.gender === 'Male' ? 'checked' : '' %> >Male
+            <input type="radio" name="gender" value="Female" <%= student.gender === 'Female' ? 'checked' : '' %> >Female
+             <input type="radio" name="gender" value="Others" <%= student.gender === 'Others' ? 'checked' : '' %>>Other
+                    </div>
+
+                      <div class="form-group">
+               <label><b>Select the course you want to enroll:</b> </label>
+               <select class="in" name="course">
+                <option value="BCA"<%= student.course === 'BCA' ? 'selected' : '' %>>BCA</option>
+                <option value="BBA" <%= student.course === 'BBA' ? 'selected' : '' %>>BBA</option>
+                <option value="BA" <%= student.course === 'BA' ? 'selected' : '' %>>BA</option>
+                <option value="B.Com"<%= student.course === 'B.Com' ? 'selected' : '' %>>B.Com</option>
+                <option value="B.Sc"<%= student.course === 'B.Sc' ? 'selected' : '' %>>B.Sc</option>
+               </select>
+                      </div>
+
+               <button type="submit">Update</button>
+    </form>
+    <p id="msg"></p>
+    <script src="/JS/edit.js"></script>
+</body>
+</html>
